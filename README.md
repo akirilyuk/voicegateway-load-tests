@@ -22,7 +22,7 @@ The command above will generate calls towards the system at IP 18.185.52.215.  T
 - `-r`: rate at which to generate calls, in calls per second
 - `-l`: limit of concurrent calls; once the number of calls in progress hits this limit the sending rate will be throttled to keep it at or below this limit
 - `-m`: total number of calls to send
-- `'s`: the dialed number to put in the SIP INVITE
+- `-s`: the dialed number to put in the SIP INVITE
 
 *Note:* You must configure the jambonz system under test with the phone number used in the `-s` parameter, and that phone number should route to an appropriate jambonz application that you want to load test.
 
@@ -34,4 +34,4 @@ In one window, start the receiving scenario (this must be done first):
 sipp -sf uas.xml
 ```
 
-In a second window, you can now start the sending application.  You should be able to use the same sending scenario as before, the difference is that on the jambonz side you must route the number to application that dials back to the load test generator.
+In a second window, you can now start the sending application.  You can be use the same sending scenario as before, the difference is that on the jambonz side you must route the number to application that dials back to the load test generator.
